@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MarDut/MarMat/issues"
   },
-  "homepage": "https://github.com/MarDut/MarMat#readme"
+  "homepage": "https://github.com/MarDut/MarMat#readme",
+  "devDependencies": {
+    "cypress": "^12.13.0"
+  }
 }
