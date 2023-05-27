@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="667010ca-06f3-4dbc-b401-247f96052ead" name="Changes" comment="cypress base">
+      <change afterPath="$PROJECT_DIR$/.idea/MarMat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/1-getting-started/todo.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/actions.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/aliasing.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/assertions.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/connectors.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/cookies.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/cypress_api.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/files.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/location.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/misc.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/navigation.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/network_requests.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/querying.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/spies_stubs_clocks.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/storage.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/traversal.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/utilities.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/viewport.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/waiting.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/2-advanced-examples/window.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/e2e/spec.cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/fixtures/example.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/support/commands.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/support/e2e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QNPaQpkSI2jWTWYs7XcokrGTUR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/mrdut/Documents/WSB/MarMat"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mrdut\Documents\!WSB\MarMat\node_modules" />
+      <recent name="C:\Users\mrdut\Documents\!WSB\MarMat\cypress" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="MarMat" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="MarMat" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="667010ca-06f3-4dbc-b401-247f96052ead" name="Changes" comment="" />
+      <created>1685191129603</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685191129603</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initail commit">
+      <created>1685191316853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685191316853</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initail commit" />
+    <MESSAGE value="cypress base" />
+    <option name="LAST_COMMIT_MESSAGE" value="cypress base" />
+  </component>
+</project>
