@@ -1,18 +1,29 @@
 class HomePage {
 
   visit() {
-    return cy.visit('http://marek.biolokalizator.pl/#');
+    return cy.visit('/');
   }
 
-  selectFromMenu(menu){}
+  selectFromMenu(menu){
+    cy.get('#primary-menu > li > a').contains(`${menu}`).click()
+  }
 
-  search(){}
+  search(searchText){
+    cy.get('.search-toggle-open').click()
+    cy.get('input[class="search-field"]').type(searchText + '{enter}')
+  }
 
-  viewAllProduct(){}
+  viewAllProducts(){
 
-  selectProduct(){}
+  }
 
-  addToCart(){}
+  selectProduct(productNumber){
+    cy.get('.products.content-wrap li').eq(productNumber).click()
+  }
+
+  addToCart(productNumber){
+    cy.get('.add_to_cart_button').eq(productNumber).click()
+  }
 }
 
 export default HomePage;
