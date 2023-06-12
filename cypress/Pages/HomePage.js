@@ -5,7 +5,7 @@ class HomePage {
   }
 
   selectFromMenu(menu){
-    cy.get('#primary-menu > li > a').contains(`${menu}`).click()
+    cy.get('#primary-menu > li > a').contains(menu).click()
   }
 
   search(searchText){
@@ -17,12 +17,12 @@ class HomePage {
 
   }
 
-  selectProduct(productNumber){
-    cy.get('.products.content-wrap li').eq(productNumber).click()
+  selectProduct(index){
+    cy.get('.products.content-wrap li').eq(index).click()
   }
 
-  addToCart(productNumber){
-    cy.get('.add_to_cart_button').eq(productNumber).click()
+  addToCart(index){
+    cy.get('.add_to_cart_button').eq(index).click()
   }
 }
 
