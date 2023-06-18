@@ -35,12 +35,12 @@ class CartPage {
 
   increaseAmount(productIndex) {
     this.increaseProductAmountButton.eq(productIndex).click();
-    updateCart();
+    //updateCart();
   }
 
   decreaseAmount(productIndex) {
     this.decreaseProductAmountButton.eq(productIndex).click();
-    updateCart();
+    //updateCart();
   }
 
   deleteProduct(index) {

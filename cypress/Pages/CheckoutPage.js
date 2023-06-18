@@ -22,11 +22,11 @@ class CheckoutPage {
         return cy.get('#customer_details #billing_country');
     }
 
-    get adress1Input() {
+    get address1Input() {
         return cy.get('#customer_details #billing_address_1');
     }
 
-    get adress2Input() {
+    get address2Input() {
         return cy.get('#customer_details #billing_address_2');
     }
 
@@ -74,11 +74,11 @@ class CheckoutPage {
         return cy.get('#shipping_country');
     }
 
-    get shippingAdress1Input() {
+    get shippingAddress1Input() {
         return cy.get('.shipping_address #shipping_address_1');
     }
 
-    get shippingAdress2Input() {
+    get shippingAddress2Input() {
         return cy.get('.shipping_address #shipping_address_2');
     }
 
@@ -127,11 +127,11 @@ class CheckoutPage {
     }
 
     fillAddress1(string) {
-        this.fillAddress1.type(string);
+        this.address1Input.type(string);
     }
 
     fillAddress2(string) {
-        this.fillAddress2.type(string);
+        this.address2Input.type(string);
     }
 
     fillPostcode(string) {
@@ -154,7 +154,7 @@ class CheckoutPage {
         this.createAccountCheckbox.check();
     }
 
-    sendToDifferentAdress() {
+    sendToDifferentAddress() {
         this.shipToDifferentAddressCheckbox.check();
         this.shipToDifferentAddressContainer.should('be.visible')
     }
@@ -178,11 +178,11 @@ class CheckoutPage {
     }
 
     fillShippingAddress1(string) {
-        this.shippingAdress1Input.type(string);
+        this.shippingAddress1Input.type(string);
     }
 
     fillShippingAddress2(string) {
-        this.shippingAdress2Input.type(string);
+        this.shippingAddress2Input.type(string);
     }
 
     fillShippingPostcode(string) {
@@ -193,8 +193,8 @@ class CheckoutPage {
         this.shippingCity.type(string);
     }
 
-    selectShippingMethod(string) {
-        this.shippingMethodRadio.contains(string).check();
+    selectShippingMethod(index) {
+        this.shippingMethodRadio.eq(index).check();
     }
 
     acceptTerms() {
