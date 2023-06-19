@@ -214,7 +214,17 @@ class CheckoutPage {
 
     //  useDiscountCode() { }
 
-    //  fillTheForm() {}
+      fillTheForm() { //Potem się zrobi randomowe, do ustalenia czy sami wrzucimy dane do losowania czy może jakaś biblioteka
+        this.fillName('Jan')
+        this.fillLastName('Nowak')
+        this.fillAddress1('Kwiatowa 10')
+        this.fillPostcode('05-800')
+        this.fillCity('Warszawa')
+        this.fillPhone('123123123')
+        this.fillEmail('123@123.pl')
+        this.acceptTerms()
+
+      }
 
 }
 

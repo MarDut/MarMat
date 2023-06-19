@@ -29,6 +29,8 @@ class ShopPage {
 
     addToCart(index) {
         this.addToCartButton.eq(index).click()
+        cy.intercept('POST', '/?wc-ajax=add_to_cart').as('addToCartRequest')
+        cy.wait('@addToCartRequest').its('response.statusCode').should('eq', 200)
     }
 
     selectCategory(string) {
