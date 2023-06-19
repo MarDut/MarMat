@@ -1,3 +1,5 @@
+import CartPage from '../Pages/CartPage';
+import CheckoutPage from '../Pages/CheckoutPage';
 import HomePage from '../Pages/HomePage';
 import ShopPage from '../Pages/ShopPage';
 
@@ -30,7 +32,7 @@ const homePage = new HomePage();
 
 })
 
-context.only('Shop page', () => {
+context('Shop page', () => {
 
   const shopPage = new ShopPage();
 
@@ -45,6 +47,27 @@ context.only('Shop page', () => {
 
   it("Adds the 1st product from the list to the cart", () => {
     shopPage.addToCart(0)
+  })
+
+})
+
+context('Single session happy path e2e tests', () => {
+
+  const shopPage = new ShopPage();
+  const homePage = new HomePage();
+  const cartPage = new CartPage();
+  const checkoutPage = new CheckoutPage();
+
+  it('Places an order in an e2e process', () => {
+    homePage.visit()
+    homePage.selectFromMenu('Shop')
+    shopPage.addToCart(0)
+    homePage.selectFromMenu('Cart')
+    cartPage.goToCheckout()
+    checkoutPage.fillTheForm()
+    checkoutPage.placeOrder()
+    cy.url().should('contain', '/order-received/')
+
   })
 
 })
