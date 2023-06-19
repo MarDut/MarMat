@@ -1,11 +1,11 @@
 class ProductPage {
-  visit() {}
+  visit() { }
 
-  increaseAmount(){}
+  increaseAmount() { }
 
-  decreaseAmonut(){}
+  decreaseAmonut() { }
 
-  addToCart(){}
+  addToCart() { }
 }
 
 export default AboutPage;

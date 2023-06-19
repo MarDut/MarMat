@@ -1,17 +1,23 @@
 class ShopPage {
 
-// getters
+    // getters
 
     get productListElement() {
         return cy.get('.products.content-wrap li');
     }
 
-    get addToCartButton () {
+    get addToCartButton() {
         return cy.get('.add_to_cart_button');
     }
 
+    get productCategoryCheckbox() {
+        return cy.get('.wpfLiLabel');
+    }
 
-// methods
+
+
+
+    // methods
 
     visit() {
         return cy.visit('/shop');
@@ -20,11 +26,15 @@ class ShopPage {
     selectProduct(index) {
         this.productListElement.eq(index).click()
     }
-    
+
     addToCart(index) {
         this.addToCartButton.eq(index).click()
     }
-  
+
+    selectCategory(string) {
+        this.productCategoryCheckbox.contains(string).click()
+    }
+
 }
 
 export default ShopPage;
