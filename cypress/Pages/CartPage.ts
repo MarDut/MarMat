@@ -33,17 +33,17 @@ class CartPage {
 
   // methods
 
-  increaseAmount(productIndex) {
+  increaseAmount(productIndex: number) {
     this.increaseProductAmountButton.eq(productIndex).click();
     //updateCart();
   }
 
-  decreaseAmount(productIndex) {
+  decreaseAmount(productIndex: number) {
     this.decreaseProductAmountButton.eq(productIndex).click();
     //updateCart();
   }
 
-  deleteProduct(index) {
+  deleteProduct(index: number) {
     this.deleteProductButton.eq(index).click();
   }
 
@@ -51,8 +51,8 @@ class CartPage {
     this.updateCartButton.click();
   }
 
-  useDiscountCode(string) {
-    this.discountCodeInput.type(string);
+  useDiscountCode(discountCode: string) {
+    this.discountCodeInput.type(discountCode);
     this.useDiscountCodeButton.click();
   }
 

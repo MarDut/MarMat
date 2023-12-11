@@ -1,3 +1,9 @@
+import { Test } from 'mocha';
+import {
+    CustomerData,
+    TestData 
+  } from '../fixtures/test-data';
+
 class CheckoutPage {
 
     // getters
@@ -8,10 +14,6 @@ class CheckoutPage {
 
     get lastNameInput() {
         return cy.get('#billing_last_name');
-    }
-
-    get companyInput() {
-        return cy.get('#billing_company');
     }
 
     get companyInput() {
@@ -110,44 +112,44 @@ class CheckoutPage {
 
     // methods
 
-    fillName(string) {
-        this.nameInput.type(string);
+    fillName(name: string) {
+        this.nameInput.type(name);
     }
 
-    fillLastName(string) {
-        this.lastNameInput.type(string);
+    fillLastName(lastName: string) {
+        this.lastNameInput.type(lastName);
     }
 
-    fillCompany(string) {
-        this.companyInput.type(string);
+    fillCompany(company :string) {
+        this.companyInput.type(company);
     }
 
-    selectCountry(string) {
-        this.countryDropdown.select(string);
+    selectCountry(country: string) {
+        this.countryDropdown.select(country);
     }
 
-    fillAddress1(string) {
-        this.address1Input.type(string);
+    fillAddress1(address1: string) {
+        this.address1Input.type(address1);
     }
 
-    fillAddress2(string) {
-        this.address2Input.type(string);
+    fillAddress2(address2: string) {
+        this.address2Input.type(address2);
     }
 
-    fillPostcode(string) {
-        this.postCodeInput.type(string);
+    fillPostcode(postCode: string) {
+        this.postCodeInput.type(postCode);
     }
 
-    fillCity(string) {
-        this.cityInput.type(string);
+    fillCity(city: string) {
+        this.cityInput.type(city);
     }
 
-    fillPhone(string) {
-        this.phoneInput.type(string);
+    fillPhone(phoneNumber: string) {
+        this.phoneInput.type(phoneNumber);
     }
 
-    fillEmail(string) {
-        this.emailInput.type(string);
+    fillEmail(email: string) {
+        this.emailInput.type(email);
     }
 
     createAccount() {
@@ -161,39 +163,39 @@ class CheckoutPage {
 
     // shipping fields
 
-    fillShippingName(string) {
-        this.shippingNameInput.type(string);
+    fillShippingName(shippingName: string) {
+        this.shippingNameInput.type(shippingName);
     }
 
-    fillShippingLastName(string) {
-        this.shippingLastnameInput.type(string);
+    fillShippingLastName(shippingLastName: string) {
+        this.shippingLastnameInput.type(shippingLastName);
     }
 
-    fillShippingCompany(string) {
-        this.shippingCompanyInput.type(string);
+    fillShippingCompany(shippingCompany: string) {
+        this.shippingCompanyInput.type(shippingCompany);
     }
 
-    selectShippingCountry(string) {
-        this.shippingCountryDropdown.select(string);
+    selectShippingCountry(shippingCountry: string) {
+        this.shippingCountryDropdown.select(shippingCountry);
     }
 
-    fillShippingAddress1(string) {
-        this.shippingAddress1Input.type(string);
+    fillShippingAddress1(shippingAddress1: string) {
+        this.shippingAddress1Input.type(shippingAddress1);
     }
 
-    fillShippingAddress2(string) {
-        this.shippingAddress2Input.type(string);
+    fillShippingAddress2(shippingAddress2: string) {
+        this.shippingAddress2Input.type(shippingAddress2);
     }
 
-    fillShippingPostcode(string) {
-        this.shippingPostcodeInput.type(string);
+    fillShippingPostcode(shippingPostCode: string) {
+        this.shippingPostcodeInput.type(shippingPostCode);
     }
 
-    fillShippingCity(string) {
-        this.shippingCity.type(string);
+    fillShippingCity(shippingCity: string) {
+        this.shippingCity.type(shippingCity);
     }
 
-    selectShippingMethod(index) {
+    selectShippingMethod(index: number) {
         this.shippingMethodRadio.eq(index).check();
     }
 
@@ -206,23 +208,23 @@ class CheckoutPage {
     }
 
     goToConfirmation() {
-        acceptTerms();
-        placeOrder();
+        this.acceptTerms();
+        this.placeOrder();
     }
 
     //  selectPaymentOption() {}
 
     //  useDiscountCode() { }
 
-      fillTheForm() { //Potem się zrobi randomowe, do ustalenia czy sami wrzucimy dane do losowania czy może jakaś biblioteka
-        this.fillName('Jan')
-        this.fillLastName('Nowak')
-        this.fillAddress1('Kwiatowa 10')
-        this.fillPostcode('05-800')
-        this.fillCity('Warszawa')
-        this.fillPhone('123123123')
-        this.fillEmail('123@123.pl')
-        this.acceptTerms()
+      fillTheForm(customer: CustomerData) { //Potem się zrobi randomowe, do ustalenia czy sami wrzucimy dane do losowania czy może jakaś biblioteka
+        this.fillName(`TestData.Customers.${customer}.Name`);
+        this.fillLastName(`TestData.Customers.${customer}.LastName`);
+        this.fillAddress1(`TestData.Customers.${customer}.Address1`);
+        this.fillPostcode(`TestData.Customers.${customer}.Postcode`);
+        this.fillCity(`TestData.Customers.${customer}.City`);
+        this.fillPhone(`TestData.Customers.${customer}.Phone`);
+        this.fillEmail(`TestData.Customers.${customer}.Email`);
+        this.acceptTerms();
 
       }
 

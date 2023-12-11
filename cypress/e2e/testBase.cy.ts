@@ -1,33 +1,49 @@
+/// <reference types="Cypress" />
+
 import CartPage from '../Pages/CartPage';
 import CheckoutPage from '../Pages/CheckoutPage';
 import HomePage from '../Pages/HomePage';
 import ShopPage from '../Pages/ShopPage';
+import ProductPage from '../Pages/ProductPage';
+import ConfirmationPage from '../Pages/ConfirmationPage';
+import SearchPage from '../Pages/SearchPage';
+
+//test data
+import {
+  MenuOptions, 
+  SearchingItems,
+  TestData
+} from '../fixtures/test-data';
+
+
 
 context('Home page', () => {
 
 const homePage = new HomePage();
+const productPage = new ProductPage();
+const searchPage = new SearchPage();
 
   beforeEach('Navigates to main page', () => {
     homePage.visit();
   })
 
   it('Selects Cart from the menu', () => {
-      homePage.selectFromMenu('Cart')
-      cy.url().should('eq', Cypress.config().baseUrl + '/cart/')
+    homePage.selectFromMenu(MenuOptions.Cart)
+    homePage.verifyIsAt();
   })
 
   it("Selects the 1st product from the list and opens it's page", () => {
-    homePage.selectProduct(0)
-    cy.url().should('include', '/produkt/')
+    homePage.selectProduct(0);
+    productPage.verifyIsAt();
   })
 
   it("Adds the 1st product from the list to the cart", () => {
-    homePage.addToCart(0)
+    homePage.addToCart(0);
   })
 
   it("Tests the searching tool", () => {
-    homePage.search('mug')
-    cy.url().should('eq', Cypress.config().baseUrl + '/?s=mug')
+    homePage.search(SearchingItems.Mug)
+    searchPage.verifyIsAt(SearchingItems.Mug);
   })
 
 })
@@ -35,6 +51,7 @@ const homePage = new HomePage();
 context('Shop page', () => {
 
   const shopPage = new ShopPage();
+  const productPage = new ProductPage();
 
   beforeEach('Navigates to shop', () => {
     shopPage.visit();
@@ -42,7 +59,7 @@ context('Shop page', () => {
 
   it("Selects the 1st product from the list and opens it's page", () => {
     shopPage.selectProduct(0)
-    cy.url().should('include', '/produkt/')
+    productPage.verifyIsAt();
   })
 
   it("Adds the 1st product from the list to the cart", () => {
@@ -52,22 +69,21 @@ context('Shop page', () => {
 })
 
 context('Single session happy path e2e tests', () => {
-
   const shopPage = new ShopPage();
   const homePage = new HomePage();
   const cartPage = new CartPage();
   const checkoutPage = new CheckoutPage();
+  const confirmationPage = new ConfirmationPage();
 
-  it('Places an order in an e2e process', () => {
+  it.only('Places an order in an e2e process', () => {
     homePage.visit()
-    homePage.selectFromMenu('Shop')
+    homePage.selectFromMenu(MenuOptions.Shop)
     shopPage.addToCart(0)
-    homePage.selectFromMenu('Cart')
-    cartPage.goToCheckout()
-    checkoutPage.fillTheForm()
-    checkoutPage.placeOrder()
-    cy.url().should('contain', '/order-received/')
-
+    homePage.selectFromMenu(MenuOptions.Cart)
+    cartPage.goToCheckout();
+    checkoutPage.fillTheForm(TestData.Customers.Customer1);
+    checkoutPage.placeOrder();
+    confirmationPage.verifyIsAt()
   })
 
 })
