@@ -28,8 +28,8 @@ class ShopPage {
     }
 
     addToCart(index: number) {
-        this.addToCartButton.eq(index).click()
         cy.intercept('POST', '/?wc-ajax=add_to_cart').as('addToCartRequest')
+        this.addToCartButton.eq(index).click()
         cy.wait('@addToCartRequest').its('response.statusCode').should('eq', 200)
     }
 
