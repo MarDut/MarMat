@@ -29,24 +29,33 @@ class HomePage {
     return cy.visit('/');
   }
 
-  selectFromMenu(menu) {
+  selectFromMenu(menu: string) {
     this.menuListElement.contains(menu).click()
   }
 
-  search(searchText) {
+  search(searchText: string) {
     this.searchBoxIcon.click()
     this.searchBoxInput.type(searchText + '{enter}')
   }
 
   viewAllProducts() {}
 
-  selectProduct(index) {
+  selectProduct(index: number) {
     this.productListElement.eq(index).click()
   }
 
-  addToCart(index) {
+  addToCart(index: number) {
     this.addToCartButton.eq(index).click()
+  }
+
+  verifyIsAt(){
+    cy.url().should('eq', Cypress.config().baseUrl + '/cart/');
   }
 }
 
 export default HomePage;
+
+
+
+
+

@@ -1,4 +1,10 @@
 class ProductPage {
+
+
+  verifyIsAt() {
+   return cy.url().should('include', '/produkt/');
+  }
+
   visit() { }
 
   increaseAmount() { }
@@ -8,4 +14,4 @@ class ProductPage {
   addToCart() { }
 }
 
-export default AboutPage;
+export default ProductPage;

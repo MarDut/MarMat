@@ -23,18 +23,18 @@ class ShopPage {
         return cy.visit('/shop');
     }
 
-    selectProduct(index) {
+    selectProduct(index: number) {
         this.productListElement.eq(index).click()
     }
 
-    addToCart(index) {
-        this.addToCartButton.eq(index).click()
+    addToCart(index: number) {
         cy.intercept('POST', '/?wc-ajax=add_to_cart').as('addToCartRequest')
+        this.addToCartButton.eq(index).click()
         cy.wait('@addToCartRequest').its('response.statusCode').should('eq', 200)
     }
 
-    selectCategory(string) {
-        this.productCategoryCheckbox.contains(string).click()
+    selectCategory(categoryName: string) {
+        this.productCategoryCheckbox.contains(categoryName).click()
     }
 
 }

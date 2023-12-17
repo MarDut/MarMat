@@ -7,7 +7,7 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     supportFile: false,
     testIsolation: true,
-    baseUrl: 'http://marek.biolokalizator.pl',
+    baseUrl: 'https://matemare.cfolks.pl',
     setupNodeEvents(on, config) {
       // implement node event listeners here
 

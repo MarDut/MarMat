@@ -11,13 +11,11 @@ class LoginPage {
     return cy.get('button[type="submit"]');
   }
 
-  login(username, password) {
+  login(username: string, password: string) {
     this.usernameInput.type(username);
     this.passwordInput.type(password);
     this.loginButton.click();
   }
 }
-
-
 
 export default new LoginPage();
