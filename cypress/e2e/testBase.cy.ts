@@ -75,7 +75,7 @@ context('Single session happy path e2e tests', () => {
   const checkoutPage = new CheckoutPage();
   const confirmationPage = new ConfirmationPage();
 
-  it.only('Places an order in an e2e process', () => {
+  it('Places an order in an e2e process', () => {
     homePage.visit()
     homePage.selectFromMenu(MenuOptions.Shop)
     shopPage.addToCart(0)
