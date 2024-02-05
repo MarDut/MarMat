@@ -15,7 +15,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          comand: npm run test
+          comand: npm run test-and-report
       - name: Uploading artifacts
         uses: actions/upload-artifact@v2
         if: always()

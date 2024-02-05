@@ -1,6 +1,15 @@
 const { defineConfig } = require("cypress");
+const Mochawesome = require("mochawesome");
 
 module.exports = defineConfig({
+
+  reporter: "mochawesome",
+  reporterOptions:{
+    reportDir: "cypress/results",
+    overwrite: true,
+    html: false
+  },
+  
   e2e: {
     video: false,
     viewportHeight: 1080,
