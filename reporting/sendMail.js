@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 
 const mailOptions = {
   from: 'cypress.tests.results@gmail.com',
-  to: 'matolejniczak96@gmail.com',
+  to: 'cypress.tests.results@gmail.com',
   subject: 'Cypress Test Results',
   text: 'Test results are attached.',
   attachments: [
