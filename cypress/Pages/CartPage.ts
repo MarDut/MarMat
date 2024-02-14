@@ -30,8 +30,20 @@ class CartPage {
     return cy.get('.checkout-button.button');
   }
 
+  get emptyCartContainer() {
+    return cy.get('.cart-empty');
+  }
+
+  get productItem() {
+    return cy.get('.cart_item');
+  }
+
 
   // methods
+
+  verifyIsAt(){
+    cy.url().should('eq', Cypress.config().baseUrl + '/cart/');
+  }
 
   increaseAmount(productIndex: number) {
     this.increaseProductAmountButton.eq(productIndex).click();
@@ -44,7 +56,7 @@ class CartPage {
   }
 
   deleteProduct(index: number) {
-    this.deleteProductButton.eq(index).click();
+    this.deleteProductButton.eq(index).click()
   }
 
   updateCart() {
@@ -60,6 +72,14 @@ class CartPage {
 
   goToCheckout() {
     this.checkoutButton.click();
+  }
+
+  isCartEmpty(){
+    this.emptyCartContainer.should('contain.text', 'Twój koszyk aktualnie jest pusty');
+  }
+
+  compareProcuctAmountToValue(value: number){
+    cy.get('.quantity input[inputmode="numeric"]').should('have.value', value);
   }
 }
 

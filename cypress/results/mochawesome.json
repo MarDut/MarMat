@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-14T16:34:13.284Z",
+    "end": "2024-02-14T16:34:35.721Z",
+    "duration": 22437,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "979faa0a-ab08-4b25-bd8a-1edbc8b09648",
+      "title": "",
+      "fullFile": "cypress\\e2e\\shopFlows.cy.ts",
+      "file": "cypress\\e2e\\shopFlows.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5296e4b1-b217-476a-96c5-30c2f99ba191",
+          "title": "Place order flows",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "non logged user",
+              "fullTitle": "Place order flows non logged user",
+              "timedOut": null,
+              "duration": 10593,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.visit();\nhomePage.selectFromMenu(test_data_1.MenuOptions.Shop);\nshopPage.addToCart(0);\nhomePage.selectFromMenu(test_data_1.MenuOptions.Cart);\ncartPage.goToCheckout();\ncheckoutPage.fillTheForm(test_data_1.TestData.Customers.Customer1);\ncheckoutPage.placeOrder();\nexpect(confirmationPage.verifyIsAt());",
+              "err": {},
+              "uuid": "8ab75f5d-4959-44b3-94e5-233fcdc39f8b",
+              "parentUUID": "5296e4b1-b217-476a-96c5-30c2f99ba191",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "logged user",
+              "fullTitle": "Place order flows logged user",
+              "timedOut": null,
+              "duration": 11757,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.visit();\nhomePage.selectFromMenu(test_data_1.MenuOptions.MyAccount);\nloginPage.login('mr.dutkiewicz@gmail.com', 'iKHccQ6PLrs4Uvv');\nhomePage.selectFromMenu(test_data_1.MenuOptions.Shop);\nshopPage.addToCart(0);\nhomePage.selectFromMenu(test_data_1.MenuOptions.Cart);\ncartPage.goToCheckout();\ncheckoutPage.acceptTerms();\ncheckoutPage.placeOrder();\nexpect(confirmationPage.verifyIsAt());",
+              "err": {},
+              "uuid": "b3072444-c42b-4e2e-8b7f-70da968f3f02",
+              "parentUUID": "5296e4b1-b217-476a-96c5-30c2f99ba191",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8ab75f5d-4959-44b3-94e5-233fcdc39f8b",
+            "b3072444-c42b-4e2e-8b7f-70da968f3f02"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22350,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

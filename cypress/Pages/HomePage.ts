@@ -47,10 +47,6 @@ class HomePage {
   addToCart(index: number) {
     this.addToCartButton.eq(index).click()
   }
-
-  verifyIsAt(){
-    cy.url().should('eq', Cypress.config().baseUrl + '/cart/');
-  }
 }
 
 export default HomePage;
