@@ -216,7 +216,7 @@ class CheckoutPage {
 
     //  useDiscountCode() { }
 
-      fillTheForm(customer: CustomerData) { //Potem się zrobi randomowe, do ustalenia czy sami wrzucimy dane do losowania czy może jakaś biblioteka
+      fillTheForm(customer: CustomerData) { 
         this.fillName(customer.Name);
         this.fillLastName(customer.LastName);
         this.fillAddress1(customer.Address1);

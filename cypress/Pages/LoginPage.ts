@@ -1,4 +1,5 @@
 class LoginPage {
+  
   get usernameInput() {
     return cy.get('#username');
   }
@@ -8,7 +9,11 @@ class LoginPage {
   }
 
   get loginButton() {
-    return cy.get('button[type="submit"]');
+    return cy.get('.login button[type="submit"]');
+  }
+
+  get errorMessage() {
+    return cy.get('.woocommerce-error');
   }
 
   login(username: string, password: string) {
@@ -16,6 +21,10 @@ class LoginPage {
     this.passwordInput.type(password);
     this.loginButton.click();
   }
+
+  checkIfErrorisVisible(){
+    this.errorMessage.should('be.visible');
+  }
 }
 
-export default new LoginPage();
+export default LoginPage;
