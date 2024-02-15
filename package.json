@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --browser chrome",
-    "generate-report": "marge -i --overwrite -f tests-results cypress/results/mochawesome.json -o cypress/results",
-    "test-and-report": "npx cypress run --browser chrome && npm run generate-report && node reporting/sendMail.js"
+    "generate-report": "mochawesome-merge cypress/results/*.json -o cypress/results/jointReport.json && marge -i --overwrite -f tests-results cypress/results/jointReport.json -o cypress/results && rm cypress/results/*.json",
+    "test-and-report": "npm run test && npm run generate-report && node reporting/sendMail.js"
   },
   "repository": {
     "type": "git",
