@@ -29,7 +29,7 @@ const myAccount = new MyAccount();
 
   it('log in and logout', () => {
     homePage.selectFromMenu(MenuOptions.MyAccount)
-    loginPage.login('mr.dutkiewicz@gmail.com', 'iKHccQ6PLrs4Uvv');
+    loginPage.login('mr.dutkiewicz@gmail.com', 'vCZzF2{y~zn14J');
     expect(myAccount.verifyIsAt());
     myAccount.logout();
   })

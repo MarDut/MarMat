@@ -36,7 +36,7 @@ describe('Place order flows', () => {
   it('logged user', () => {
     homePage.visit()
     homePage.selectFromMenu(MenuOptions.MyAccount)
-    loginPage.login('mr.dutkiewicz@gmail.com', 'iKHccQ6PLrs4Uvv');
+    loginPage.login('mr.dutkiewicz@gmail.com', 'vCZzF2{y~zn14J');
     homePage.selectFromMenu(MenuOptions.Shop);
     shopPage.addToCart(0);
     homePage.selectFromMenu(MenuOptions.Cart);

@@ -17,6 +17,7 @@ module.exports = defineConfig({
     supportFile: false,
     testIsolation: true,
     baseUrl: 'https://matemare.cfolks.pl',
+    experimentalRunAllSpecs: true,
     setupNodeEvents(on, config) {
       // implement node event listeners here
 

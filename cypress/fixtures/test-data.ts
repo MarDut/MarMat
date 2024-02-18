@@ -10,7 +10,16 @@ export enum MenuOptions {
 
   export enum SearchingItems {
     Mug = 'mug',
-    Hat = 'hat'
+    Hat = 'hat',
+    TShirt = 't-shirt'
+  }
+
+  export let randomComment = (Math.random() + 1).toString(36).substring(2)
+
+  export enum orderBy {
+    Price = 'price',
+    Popularity = 'popularity',
+    Rating = 'rating'
   }
 
   export interface CustomerData {
