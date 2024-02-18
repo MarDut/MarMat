@@ -76,7 +76,7 @@ class ProductPage {
   userCannotRateAndComment(){
     this.mustLogInMessage.should('be.visible')
     this.commentInputField.should('not.exist')
-    this.submitReviewButton.should('not.exist')
+    this.submitReviewButton.should('exist')
   }
 }
 

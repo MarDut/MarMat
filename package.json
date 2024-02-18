@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx cypress run --browser chrome",
     "generate-report": "mochawesome-merge cypress/results/*.json -o cypress/results/jointReport.json && marge -i --overwrite -f tests-results cypress/results/jointReport.json -o cypress/results && rm cypress/results/*.json",
-    "test-and-report": "npm run test && npm run generate-report && node reporting/sendMail.js"
+    "test-and-report": "npm run test ; npm run generate-report ; node reporting/sendMail.js"
   },
   "repository": {
     "type": "git",
