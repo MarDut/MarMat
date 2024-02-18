@@ -8,7 +8,7 @@ export enum MenuOptions {
     Checkout = 'Checkout'
   }
 
-  export enum SearchingItems {
+  export enum ProductItems {
     Mug = 'mug',
     Hat = 'hat',
     TShirt = 't-shirt'
@@ -20,6 +20,17 @@ export enum MenuOptions {
     Price = 'price',
     Popularity = 'popularity',
     Rating = 'rating'
+  }
+
+  export interface UserData {
+    Login: string,
+    Password: string
+  }
+
+  export interface Users {
+    mrdut: UserData,
+    matis: UserData,
+    notExisting: UserData
   }
 
   export interface CustomerData {
@@ -39,7 +50,9 @@ export enum MenuOptions {
   }
 
 export class TestData {
-  static Customers: Customers = {
+  
+  static Customers: Customers = 
+  {
     Customer1: {
       Name: 'Jan',
       LastName : 'Nowak',
@@ -61,8 +74,25 @@ export class TestData {
       Phone: '333333333',
       Email: '333@233.pl'
     }
-
   }
+
+  static Users: Users = 
+  {
+    mrdut: {
+      Login: "mr.dutkiewicz@gmail.com",
+      Password: "vCZzF2{y~zn14J",
+    },
+    matis: {
+      Login: "matis619@o2.pl",
+      Password: "rzekawisla2",
+    },
+    notExisting: {
+      Login: "notExisting@user.pl",
+      Password: "XDD",
+    }
+  }
+
+
 }
 
 

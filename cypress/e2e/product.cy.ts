@@ -6,7 +6,7 @@ import ProductPage from '../Pages/ProductPage';
 
 //test data
 import {
-    MenuOptions, randomComment
+    MenuOptions, TestData, randomComment
   } from '../fixtures/test-data';
 
 describe('Product', () => {
@@ -18,7 +18,7 @@ const homePage = new HomePage();
   it('logged in user can rate and comment on products', () => {
     homePage.visit()
     homePage.selectFromMenu(MenuOptions.MyAccount)
-    loginPage.login('matis619@o2.pl', 'rzekawisla2')
+    loginPage.login(TestData.Users.matis)
     productPage.visit()
     productPage.goToReviewsTab()
     productPage.rateAndComment(4, randomComment)

@@ -5,7 +5,7 @@ import HomePage from '../Pages/HomePage';
 
 //test data
 import {
-  SearchingItems
+  ProductItems
 } from '../fixtures/test-data';
 
 describe('Search', () => {
@@ -18,8 +18,8 @@ const searchPage = new SearchPage();
   })
 
   it("Search an item", () => {
-    homePage.search(SearchingItems.Mug)
-    searchPage.verifyIsAt(SearchingItems.Mug);
+    homePage.search(ProductItems.Mug)
+    searchPage.verifyIsAt(ProductItems.Mug);
   })
 
 })
