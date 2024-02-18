@@ -10,7 +10,14 @@ export enum MenuOptions {
 
   export enum SearchingItems {
     Mug = 'mug',
-    Hat = 'hat'
+    Hat = 'hat',
+    TShirt = 't-shirt'
+  }
+
+  export enum orderBy {
+    Price = 'price',
+    Popularity = 'popularity',
+    Rating = 'rating'
   }
 
   export interface CustomerData {
