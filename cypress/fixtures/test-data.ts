@@ -14,6 +14,8 @@ export enum MenuOptions {
     TShirt = 't-shirt'
   }
 
+  export let randomComment = (Math.random() + 1).toString(36).substring(2)
+
   export enum orderBy {
     Price = 'price',
     Popularity = 'popularity',
