@@ -7,7 +7,7 @@ import MyAccount from '../Pages/MyAccountPage';
 
 //test data
 import {
-  MenuOptions
+  MenuOptions, TestData
 } from '../fixtures/test-data';
 
 describe('Login', () => {
@@ -22,14 +22,13 @@ const myAccount = new MyAccount();
 
   it('loging error', () => {
     homePage.selectFromMenu(MenuOptions.MyAccount)
-    loginPage.login('mr.dutkiewicz@gmail.com', 'WRONG');
+    loginPage.login(TestData.Users.notExisting);
     expect(loginPage.checkIfErrorisVisible());
- 
   })
 
   it('log in and logout', () => {
     homePage.selectFromMenu(MenuOptions.MyAccount)
-    loginPage.login('mr.dutkiewicz@gmail.com', 'vCZzF2{y~zn14J');
+    loginPage.login(TestData.Users.mrdut);
     expect(myAccount.verifyIsAt());
     myAccount.logout();
   })

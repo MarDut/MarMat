@@ -4,7 +4,7 @@ import ShopPage from '../Pages/ShopPage';
 
 //test data
 import {
-  SearchingItems, orderBy
+  ProductItems, orderBy
 } from '../fixtures/test-data';
 
 describe('Shop', () => {
@@ -16,10 +16,10 @@ const shopPage = new ShopPage();
   })
 
   it('product categories filter is functional', () => {
-    shopPage.selectCategory(SearchingItems.Mug);
-    expect(shopPage.verifyAllProductsCategory(SearchingItems.Mug))
-    shopPage.selectCategory(SearchingItems.TShirt);
-    expect(shopPage.verifyAllProductsCategory(SearchingItems.TShirt))
+    shopPage.selectCategory(ProductItems.Mug);
+    expect(shopPage.verifyAllProductsCategory(ProductItems.Mug))
+    shopPage.selectCategory(ProductItems.TShirt);
+    expect(shopPage.verifyAllProductsCategory(ProductItems.TShirt))
   })
 
   it('price filter is functional', () => {

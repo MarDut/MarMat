@@ -1,3 +1,8 @@
+import {
+  UserData,
+  TestData 
+} from '../fixtures/test-data';
+
 class LoginPage {
   
   get usernameInput() {
@@ -16,9 +21,9 @@ class LoginPage {
     return cy.get('.woocommerce-error');
   }
 
-  login(username: string, password: string) {
-    this.usernameInput.type(username);
-    this.passwordInput.type(password);
+  login(user: UserData) {
+    this.usernameInput.type(user.Login);
+    this.passwordInput.type(user.Password);
     this.loginButton.click();
   }
 
