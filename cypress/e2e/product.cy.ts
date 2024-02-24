@@ -28,7 +28,7 @@ const homePage = new HomePage();
   it('guest user cannot rate and comment on products', () => {
     productPage.visit()
     productPage.goToReviewsTab()
-    expect(productPage.userCannotRateAndComment())
+    expect(productPage.checkIfUserCannotRateAndComment())
   })
 
 })

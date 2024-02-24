@@ -73,7 +73,7 @@ class ProductPage {
     this.lastAddedcomment.invoke('text').invoke('trim').should('be.equal', comment)
   }
 
-  userCannotRateAndComment(){
+  checkIfUserCannotRateAndComment(){
     this.mustLogInMessage.should('be.visible')
     this.commentInputField.should('not.exist')
     this.submitReviewButton.should('not.exist')

@@ -88,7 +88,7 @@ export class TestData {
     },
     notExisting: {
       Login: "notExisting@user.pl",
-      Password: "XDD",
+      Password: "notCorrect",
     }
   }
 
