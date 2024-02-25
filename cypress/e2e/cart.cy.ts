@@ -27,7 +27,6 @@ const cartPage = new CartPage();
   })
 
   it("increase and decrease product amount", () => {
-    homePage.visit();
     homePage.selectFromMenu(MenuOptions.Shop);
     shopPage.addToCart(0);
     homePage.selectFromMenu(MenuOptions.Cart);
@@ -40,7 +39,6 @@ const cartPage = new CartPage();
   })
 
   it("decrease product amount to 0", () => {
-    homePage.visit();
     homePage.selectFromMenu(MenuOptions.Shop);
     shopPage.addToCart(0);
     homePage.selectFromMenu(MenuOptions.Cart);
@@ -51,7 +49,6 @@ const cartPage = new CartPage();
   })
 
   it("delete last product", () => {
-    homePage.visit();
     homePage.selectFromMenu(MenuOptions.Shop);
     shopPage.addToCart(0);
     homePage.selectFromMenu(MenuOptions.Cart);

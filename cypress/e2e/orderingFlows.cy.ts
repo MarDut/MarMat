@@ -22,8 +22,11 @@ describe('Place order flows', () => {
   const confirmationPage = new ConfirmationPage();
   const loginPage = new LoginPage();
 
-  it('non logged user', () => {
+  beforeEach('Navigates to main page', () => {
     homePage.visit();
+  })
+
+  it('non logged user', () => {
     homePage.selectFromMenu(MenuOptions.Shop);
     shopPage.addToCart(0);
     homePage.selectFromMenu(MenuOptions.Cart);
@@ -34,7 +37,6 @@ describe('Place order flows', () => {
   })
 
   it('logged user', () => {
-    homePage.visit()
     homePage.selectFromMenu(MenuOptions.MyAccount)
     loginPage.login(TestData.Users.mrdut);
     homePage.selectFromMenu(MenuOptions.Shop);
